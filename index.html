@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokédex</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/poke-ball.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="header-branding">
+            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/poke-ball.png" alt="Pokeball Logo" class="header-logo">
+            <h1>Pokédex</h1>
+        </div>
+        <div class="search-container">
+            <input type="search" id="search-input" placeholder="Search by Name or #ID..." aria-label="Search Pokémon by Name or ID">
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div id="loader" class="loader">Loading Pokémon...</div>
+        <div id="pokedex-grid" class="pokedex-grid">
+         
+        </div>
+         <div id="no-results" class="no-results-message" style="display: none;">
+            No Pokémon found matching your search.
+        </div>
+    </main>
+
+    <dialog id="pokemon-details-modal">
+        <div class="modal-content">
+            <button id="close-modal-btn" class="close-button" aria-label="Close details">×</button>
+            <div id="modal-body">
+                <p>Loading details...</p>
+            </div>
+        </div>
+    </dialog>
+
+    <script src="script.js"></script>
+</body>
+</html>
